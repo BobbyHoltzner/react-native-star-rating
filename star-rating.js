@@ -73,7 +73,7 @@ class StarRating extends Component {
     }
 
     return (
-      <View style={styles.starRatingContainer}>
+      <View style={[styles.starRatingContainer, this.props.containerStyle]}>
         {starButtons}
       </View>
     );
@@ -92,6 +92,7 @@ StarRating.propTypes = {
   starColor: PropTypes.string,
   emptyStarColor: PropTypes.string,
   starSize: PropTypes.number,
+  containerStyle: View.PropTypes.style
 };
 
 StarRating.defaultProps = {
